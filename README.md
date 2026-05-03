@@ -1,40 +1,31 @@
-## Here are the commands to run the project:
-### GUI Waveform: 
-~~~
+# CMPE 413 Cache Project
 
-../../launch_cadence_xrun.sh -v93 -top cache_tb and2.vhd and3.vhd and4.vhd and5.vhd or2.vhd or3.vhd or7.vhd nor2.vhd xnor2.vhd inverter.vhd mux2to1.vhd mux2to1_2bit.vhd mux4to1.vhd decoder2to4.vhd tri_buffer.vhd dff.vhd dlatch.vhd tx.vhd latch_at_negedge.vhd latch_cache_address.vhd latch_cache_data.vhd latch_rd_wr.vhd select_write_data.vhd byte_selector.vhd cache_cell.vhd cache_block.vhd cache_array.vhd fsm_states.vhd set_curr_state.vhd set_curr_states.vhd cache_fsm.vhd cache.vhd cache_tb.vhd -gui -access rwc
+## Overview
+This project implements a cache system using structural VHDL as part of a computer engineering course. The design models cache behavior at the hardware level, including memory access, control logic, and data storage.
 
-~~~
-### No GUI Waveform:
-~~~
+An extended version of the project includes a 2-way set associative cache with replacement logic, demonstrating more advanced cache design concepts.
 
-../../launch_cadence_xrun.sh -v93 -top cache_tb and2.vhd and3.vhd and4.vhd and5.vhd or2.vhd or3.vhd or7.vhd nor2.vhd xnor2.vhd inverter.vhd mux2to1.vhd mux2to1_2bit.vhd mux4to1.vhd decoder2to4.vhd tri_buffer.vhd dff.vhd dlatch.vhd tx.vhd latch_at_negedge.vhd latch_cache_address.vhd latch_cache_data.vhd latch_rd_wr.vhd select_write_data.vhd byte_selector.vhd cache_cell.vhd cache_block.vhd cache_array.vhd fsm_states.vhd set_curr_state.vhd set_curr_states.vhd cache_fsm.vhd cache.vhd cache_tb.vhd -input ncsim.run -access rwc
+## Purpose
+The goal of this project is to understand how cache memory operates at a low level by designing and simulating a working cache system. This includes exploring concepts such as:
+- Cache organization
+- Memory access timing
+- Set associativity
+- Replacement policies
 
-~~~
+## Technologies Used
+- VHDL (structural design)
+- Cadence Xcelium (simulation)
+- Digital design concepts (FSMs, latches, control logic)
 
-### Link to Public Github Repo for Easy File Download
-~~~
-https://github.com/RichardLu5647/cmpe413_final.git
-~~~
+## Features
+- Structural VHDL implementation of a cache system
+- Support for memory read/write operations
+- 2-way set associative cache (extra credit)
+- Cache control logic using FSM design
+- Simulation testbenches for verification
 
-### Testbenches
-cache_cell_tb is the testbench for the cache cell.
-cache_block_tb is the testbench for the cache block.
-cache_array_tb is the testbench for the cache array.
-cache_tb is the testbench for the full cache implementation.
-cache_tb is also the test bench for cache_fsm because the cache_tb
-heavily relies on the functionality of the fsm. And cache_tb simulates 
-fsm inputs aswell.
-cache_2_way_tb is the testbench for the extra credit.
+## Project Structure
 
-## Extra Credit Portion
-The files added for the 2-way cache, were the demux1to2.vhd,
-cache_2_way.vhd, and cache_2_way_tb.vhd. Every other file stayed the same.
-
-## Here are the commands to run the project:
-### 2-Way GUI Waveform: 
-~~~
-
-../../launch_cadence_xrun.sh -v93 -top cache_2_way_tb and2.vhd and3.vhd and4.vhd and5.vhd or2.vhd or3.vhd or7.vhd nor2.vhd xnor2.vhd inverter.vhd mux2to1.vhd mux2to1_2bit.vhd mux4to1.vhd decoder2to4.vhd demux1to2.vhd tri_buffer.vhd dff.vhd dlatch.vhd tx.vhd latch_at_negedge.vhd latch_cache_address.vhd latch_cache_data.vhd latch_rd_wr.vhd select_write_data.vhd byte_selector.vhd cache_cell.vhd cache_block.vhd cache_array.vhd fsm_states.vhd set_curr_state.vhd set_curr_states.vhd cache_fsm.vhd cache_2_way.vhd cache_2_way_tb.vhd -gui -access rwc
-
-~~~
+- `*.vhd` → VHDL source files for cache components  
+- `testbench/` → Simulation testbench files  
+- `README.md` → Project documentation  
