@@ -28,4 +28,24 @@ The goal of this project is to understand how cache memory operates at a low lev
 
 - `*.vhd` → VHDL source files for cache components  
 - `testbench/` → Simulation testbench files  
-- `README.md` → Project documentation  
+- `README.md` → Project documentation
+
+## My Contribution
+
+I designed and implemented the cache system using structural VHDL. My work included:
+
+- Designing the cache datapath and control logic
+- Implementing address breakdown and mapping logic
+- Developing an FSM-based cache controller
+- Extending the design to a 2-way set associative cache with replacement logic
+- Debugging and validating functionality using Cadence Xcelium simulations
+
+## Challenges & Learning
+
+A key challenge was ensuring correct cache behavior while maintaining synchronization between the control and datapath components. Debugging timing-related issues and verifying memory access correctness required iterative testing and simulation.
+
+Through this project, I strengthened my understanding of:
+
+- Hardware-level system design using VHDL
+- Cache architecture and memory hierarchy
+- Debugging and validating digital systems through simulation tools
